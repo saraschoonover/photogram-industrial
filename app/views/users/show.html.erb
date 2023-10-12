@@ -33,6 +33,9 @@
           <a href="#" class="card-link">Card link</a>
           <a href="#" class="card-link">Another link</a>
         </div>
+        <div class="card-body">
+          <%= render "comments/form", comment: Comment.new(photo_id: photo.id) %>
+        </div>
       </div>
     </div>
   </div>
