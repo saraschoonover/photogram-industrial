@@ -24,10 +24,11 @@
   </div>
 </div>
 
-<h2>Own photos</h2>
 
-<ul>
-  <% @user.own_photos.each do |photo| %>
-      <%= render "photos/photo", photo: photo %>
+  <% @user.leaders.each do |leader| %>
+  <div class="d-flex justify-content-center align-items-center mt-4">
+    <li>
+      <%= link_to leader.username, user_path(leader.username) %>
+    </li>
+  </div>
   <% end %>
-</ul>
